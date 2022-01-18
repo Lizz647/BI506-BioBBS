@@ -2,7 +2,7 @@
 
 + **First run:** 
 
-  Modify the database section in the `settings.py` configuration file to the locally used database 这里插一下图片
+  Modify the database section in the `settings.py` configuration file to the locally used database.
 
 + **Configuring environment:**
 
