@@ -54,21 +54,6 @@ class Category(models.Model):
         verbose_name_plural = verbose_name
 
 
-# class Tag(models.Model):
-#     """
-#     标签
-#     tid Tag自增列
-#     title 标签名 #最大不能超过32
-#     blog 所属博客 #外键关联项 一个博客站点可以有多个标签
-#
-#     """
-#     tid = models.AutoField(primary_key=True)
-#     title = models.CharField(max_length=32)
-#     blog = models.ForeignKey(to="Blog", to_field="bid", on_delete=models.CASCADE)
-#
-#     class Meta:
-#         verbose_name = "标签表"
-#         verbose_name_plural = verbose_name
 
 
 class Article(models.Model):
@@ -122,25 +107,6 @@ class ArticleDetail(models.Model):
         verbose_name = "文章详情表"
         verbose_name_plural = verbose_name
 
-
-# class Article2Tag(models.Model):
-#     """
-#     手动创建文章与标签的第三张表 多对多关系
-#     aid Article2Tag自增列
-#     article 与文章外键关联
-#     tag 与标签外键关联
-#     设置Meta属性 联合唯一
-#
-#     """
-#     aid = models.AutoField(primary_key=True)
-#     article = models.ForeignKey(to="Article", to_field="aid", on_delete=models.CASCADE)
-#     tag = models.ForeignKey(to="Tag", to_field="tid", on_delete=models.CASCADE)
-#
-#     class Meta:
-#         unique_together = (("article", "tag"),)
-#
-#         verbose_name = "文章标签关系表"
-#         verbose_name_plural = verbose_name
 
 
 class ArticleUpDown(models.Model):
